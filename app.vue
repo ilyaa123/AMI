@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <h1>Hello World</h1>
-  </div>
+  <v-app>
+    <v-btn>Button</v-btn>
+  </v-app>
 </template>
