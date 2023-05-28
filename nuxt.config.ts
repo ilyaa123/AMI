@@ -8,6 +8,14 @@ export default defineNuxtConfig({
             link: [
                 {href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap', rel: 'stylesheet'}
             ]
+        },
+        pageTransition: {
+            name: 'page',
+            mode: 'out-in'
+        },
+        layoutTransition: {
+            name: 'layout',
+            mode: 'out-in'
         }
     },
     css: ['vuetify/lib/styles/main.sass'],

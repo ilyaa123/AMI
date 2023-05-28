@@ -1,5 +1,5 @@
 <template>
     <div style="padding-top: 100px;">
-        IndexPage
+        TestPage
     </div>
 </template>
