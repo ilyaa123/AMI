@@ -18,7 +18,7 @@ export default defineNuxtConfig({
             mode: 'out-in'
         }
     },
-    css: ['vuetify/lib/styles/main.sass'],
+    css: ['vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
     modules: [
         '@pinia/nuxt',
         'nuxt-vitest'
