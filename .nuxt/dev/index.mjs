@@ -531,11 +531,9 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
-const _lazy_7RbsJU = () => Promise.resolve().then(function () { return test$1; });
 const _lazy_yyL5WV = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/test', handler: _lazy_7RbsJU, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_yyL5WV, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_yyL5WV, lazy: true, middleware: false, method: undefined }
 ];
@@ -662,17 +660,6 @@ const template = _template;
 const errorDev = /*#__PURE__*/Object.freeze({
       __proto__: null,
       template: template
-});
-
-const test = defineEventHandler((event) => {
-  return {
-    hello: "world"
-  };
-});
-
-const test$1 = /*#__PURE__*/Object.freeze({
-      __proto__: null,
-      default: test
 });
 
 const appRootId = "__nuxt";
