@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "D:/Projects/AMI/node_modules/nuxt/dist/app/entry.js": {
+  "D:/Projects/ami/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "D:/Projects/AMI/node_modules/nuxt/dist/app/entry.js"
+    "file": "D:/Projects/ami/node_modules/nuxt/dist/app/entry.js"
   }
 }

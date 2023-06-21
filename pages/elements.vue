@@ -1,5 +1,5 @@
 <template>
-  <ElementsChat />
+  <ElementsChat foo="********" />
 </template>
 
 <script setup></script>

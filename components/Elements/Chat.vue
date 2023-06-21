@@ -1,32 +1,34 @@
 <template>
-  <div class="chat-block">
-    <div class="chat-block__avatar">
+  <div class="main-wrapper">
+    <div class="avatar-wrapper">
       <img src="/avatar.png" alt="" class="avatar" />
     </div>
-    <div class="chat-block__wrapper">
-      <div class="chat-block__wrapper_title">
-        <div class="chat-block__title">Zeri</div>
-        <div class="chat-block__other">
-          <span class="chat-block__status">
-            <v-icon icon="fa:fas fa-edit"></v-icon>
+    <div class="sub-wrapper">
+      <div class="title-wrapper">
+        <div class="title">Zeri</div>
+        <div class="other">
+          <span class="status">
+            <v-icon size="medium" icon="mdi-check-all"></v-icon>
           </span>
           <span class="chat-block__time">18:09</span>
         </div>
       </div>
       <div class="chat-block__wrapper_message">
-        <div class="chat-block__message">
-          Can just tell me alredy how big ur ****?
+        <div class="message">Can just tell me alredy how big ur {{ foo }}?</div>
+        <div class="pin-wrapper">
+          <v-icon icon="mdi-pin-outline" size="medium"></v-icon>
         </div>
-        <div class="chat-block__fix-btn-wrapper">icon</div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { foo } = defineProps(["foo"]);
+</script>
 
 <style scoped>
-.chat-block {
+.main-wrapper {
   display: flex;
   height: 67px;
   width: 404px;
@@ -39,16 +41,16 @@
   padding: 5px 10px;
 }
 
-.chat-block:hover {
+.main-wrapper:hover {
   background-color: #2f2f2f;
 }
 
-.chat-block__wrapper {
+.sub-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.chat-block__wrapper_title {
+.title-wrapper {
   display: flex;
   flex-direction: row;
 }
@@ -57,20 +59,41 @@
   display: flex;
 }
 
-.chat-block__title {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  flex: 1;
-}
-
-.chart-block__status {
+.other {
   display: flex;
   align-items: center;
 }
 
-.chat-block__avatar {
+.title {
+  flex: 1;
+}
+
+.title-wrapper {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin: 0 2px 0 0;
+}
+
+.avatar-wrapper {
   margin: 0 5px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  flex: 1;
+  max-width: 282px;
+  text-overflow: ellipsis;
+}
+
+.pin-wrapper {
   display: flex;
   align-items: center;
 }
