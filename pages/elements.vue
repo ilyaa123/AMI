@@ -1,0 +1,5 @@
+<template>
+  <div>
+    <ElementsChat name="test" time="10:10" image="/avatar.png" number="1" message="test" />
+  </div>
+</template>
