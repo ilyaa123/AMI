@@ -18,6 +18,11 @@ export default defineNuxtConfig({
             mode: 'out-in'
         }
     },
+    runtimeConfig: {
+        public: {
+            baseUrlApi: ''
+        }
+    },
     css: ['vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
     modules: [
         '@pinia/nuxt',

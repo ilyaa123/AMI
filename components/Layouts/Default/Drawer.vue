@@ -55,7 +55,7 @@
         </v-list>
 
 
-        <ElementsChat 
+        <NavigationChat 
             v-for="(chat, index) in testChats" 
             :key="index" 
             :name="chat.name" 

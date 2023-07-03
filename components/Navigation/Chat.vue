@@ -7,7 +7,10 @@
         number: string | number;
 	}
 
-  	const { message } = defineProps<Props>();
+    const url = useRuntimeConfig().public.baseUrlApi
+    console.log("🚀 ~ file: Chat.vue:11 ~ url:", url)
+
+  	const { message, number, name, time, image } = defineProps<Props>();
 
     const router = useRouter();
 
@@ -17,7 +20,8 @@
         :prepend-avatar="image"
         nav
         lines="two"
-        @click="router.push(`/app/chat/1${number}`)"
+        @click="router.push(`/app/chat/${number}`)"
+        style="align-items: start;"
     >
         <v-list-item-title class="d-flex align-center">
             {{ name }}
