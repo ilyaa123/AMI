@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'LayoutsDefaultAppBar': typeof import("../components/Layouts/Default/AppBar.vue")['default']
     'LayoutsDefaultDrawer': typeof import("../components/Layouts/Default/Drawer.vue")['default']
+    'Message': typeof import("../components/Message.vue")['default']
     'NavigationChat': typeof import("../components/Navigation/Chat.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyLayoutsDefaultAppBar': typeof import("../components/Layouts/Default/AppBar.vue")['default']
     'LazyLayoutsDefaultDrawer': typeof import("../components/Layouts/Default/Drawer.vue")['default']
+    'LazyMessage': typeof import("../components/Message.vue")['default']
     'LazyNavigationChat': typeof import("../components/Navigation/Chat.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
@@ -48,6 +50,7 @@ declare module 'vue' {
 
 export const LayoutsDefaultAppBar: typeof import("../components/Layouts/Default/AppBar.vue")['default']
 export const LayoutsDefaultDrawer: typeof import("../components/Layouts/Default/Drawer.vue")['default']
+export const Message: typeof import("../components/Message.vue")['default']
 export const NavigationChat: typeof import("../components/Navigation/Chat.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
@@ -69,6 +72,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyLayoutsDefaultAppBar: typeof import("../components/Layouts/Default/AppBar.vue")['default']
 export const LazyLayoutsDefaultDrawer: typeof import("../components/Layouts/Default/Drawer.vue")['default']
+export const LazyMessage: typeof import("../components/Message.vue")['default']
 export const LazyNavigationChat: typeof import("../components/Navigation/Chat.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
