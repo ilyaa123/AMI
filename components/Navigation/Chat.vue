@@ -7,9 +7,6 @@
         number: string | number;
 	}
 
-    const url = useRuntimeConfig().public.baseUrlApi
-    console.log("🚀 ~ file: Chat.vue:11 ~ url:", url)
-
   	const { message, number, name, time, image } = defineProps<Props>();
 
     const router = useRouter();
