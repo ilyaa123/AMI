@@ -7,8 +7,6 @@
       >
     </template>
     <v-spacer></v-spacer>
-
-    <NuxtLink to="/elements"><v-btn>Elements</v-btn></NuxtLink>
     <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
     </v-btn>

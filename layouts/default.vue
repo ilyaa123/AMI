@@ -9,5 +9,8 @@
         </v-sheet>
       </v-main>
     </v-layout>
+    <ClientOnly>
+      <ModalAddNewChat />
+    </ClientOnly>
   </v-container>
 </template>

@@ -4,10 +4,6 @@
 
     const drawer = ref<boolean>(true)
 
-    const handleToAddNewChat = () => {
-
-    }
-
     const testChats = [
         {
             name: 'Zeri1',
@@ -44,16 +40,8 @@
                 <v-icon :icon="rail ? 'mdi-chevron-right' : 'mdi-chevron-left'"></v-icon>
             </v-list-item>
         </v-list>
-        
-        <v-list>
-            <v-list-item @click="handleToAddNewChat">
-                <template v-slot:prepend>
-                    <v-icon>mdi-plus</v-icon>
-                </template>
-                <v-list-item-title>Add new chat</v-list-item-title>
-            </v-list-item>
-        </v-list>
 
+        <NavigationNewChat />
 
         <NavigationChat 
             v-for="(chat, index) in testChats" 
