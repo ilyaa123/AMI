@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
 <template>
   <v-app-bar location="top" rounded class="mx-4 px-4">
     <template v-slot:prepend>
@@ -15,8 +17,6 @@
         <v-avatar></v-avatar>
       </v-btn>
     </div>
-    <v-btn icon>
-      <v-icon>mdi-dots-vertical</v-icon>
-    </v-btn>
+    <LayoutsElementsUserAvatar />
   </v-app-bar>
 </template>

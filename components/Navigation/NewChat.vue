@@ -15,7 +15,7 @@
             <template v-slot:prepend>
                 <v-icon>mdi-plus</v-icon>
             </template>
-            <v-list-item-title>Add new chat</v-list-item-title>
+            <v-list-item-title>Create new chat</v-list-item-title>
         </v-list-item>
     </v-list>
 </template>
