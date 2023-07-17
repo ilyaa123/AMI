@@ -7,27 +7,27 @@ const lightTheme: ThemeDefinition = {
     dark: false,
     colors: {
         background: '#FFFFFF',
-        surface: '#fbfbf2',
-        primary: '#008bf8',
-        secondary: '#52b788',
-        error: '#df2935',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FB8C00',
+        surface: '#F7F7F7',
+        primary: '#0052CC',
+        secondary: '#00B894',
+        error: '#E71D36',
+        info: '#3498DB',
+        success: '#27AE60',
+        warning: '#F39C12',
     }
 }
 
 const darkTheme: ThemeDefinition = {
     dark: true,
     colors: {
-        background: '#10002b',
-        surface: '#240046',
-        primary: '#7b2cbf',
-        secondary: '#9d4edd',
-        error: '#df2935',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FB8C00',
+        background: '#1C1C1C',
+        surface: '#272727',
+        primary: '#4D78FF',
+        secondary: '#9F7DFF',
+        error: '#FF5252',
+        info: '#32B8FF',
+        success: '#4CD964',
+        warning: '#FFA809',
     }
 }
 
