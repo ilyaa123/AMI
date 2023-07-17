@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
-describe('app test', () => {
+describe('my test', () => {
     it('works', () => {
-        expect(useAppConfig()).toMatchInlineSnapshot('{}')
-    })
-})
+        expect(useAppConfig()).toMatchInlineSnapshot('{}');
+    });
+});
