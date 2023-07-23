@@ -2,7 +2,7 @@ name: Github Actions
 on: 
   push: 
     branches: [ main ]
-  pull_requiest:
+  pull_request:
     branches: [ main ]
 jobs:
     init:
