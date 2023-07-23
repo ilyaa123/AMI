@@ -1,5 +1,9 @@
 name: Github Actions
-on: [push]
+on: 
+  push: 
+    branches: [ main ]
+  pull_requiest:
+    branches: [ main ]
 jobs:
     init:
         runs-on: ubuntu-latest
@@ -18,5 +22,5 @@ jobs:
               run: npm run build
             - name: unit test
               run: npm run test:unit
-            - name: lint test
+            - name: lint code
               run: npm run lint:js
