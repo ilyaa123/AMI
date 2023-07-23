@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 AMI Minimal Starter
 
 Look at the
 [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to
@@ -18,6 +18,31 @@ npm install
 # pnpm
 pnpm install
 ```
+## Lint
+
+Using eslint:
+
+```bash
+# eslit
+npm run eslint:js
+
+# prettier
+npm run lint:prettier
+
+#eslint and prettier
+npm run lint
+
+#fix with eslint and prettier
+npm run lint:fix
+```
+## Testing
+
+Using tests:
+
+```bash
+# unit tests
+npm run test:unit
+```
 
 ## Development Server
 
@@ -26,7 +51,6 @@ Start the development server on `http://localhost:3000`
 ```bash
 npm run dev
 ```
-
 ## Production
 
 Build the application for production:
