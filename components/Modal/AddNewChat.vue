@@ -3,12 +3,34 @@ import { computed } from 'vue';
 
 import { useModalStore } from '../../store/modalStore';
 
+import type { NewChatData } from '~/types/chat';
+
 const store = useModalStore();
 
 const value = computed(() => store.getAddChatModal);
 
+const valid = ref(false);
+
+const chatData = reactive<NewChatData>({
+	name: '',
+	password: ''
+});
+
 const handleToUpdate = (value: boolean) => {
 	store.setAddChatModal(value);
+};
+
+const handleOnSubmit = () => {
+	// eslint-disable-next-line
+	console.log('newChatData', chatData);
+};
+
+const handleOnChange = (value: string, name: keyof NewChatData) => {
+	chatData[name] = value;
+};
+
+const handleOnChangeValid = (value: boolean) => {
+	valid.value = value;
 };
 </script>
 
@@ -17,19 +39,17 @@ const handleToUpdate = (value: boolean) => {
 		:model-value="value"
 		max-width="600px"
 		width="100%"
-		@update:modelValue="handleToUpdate"
+		@update:model-value="handleToUpdate"
 	>
-		<v-card>
+		<v-card class="py-4">
 			<v-card-title>Create New Chat</v-card-title>
-			<v-card-text>
-				<v-row>
-					<v-col cols="12">
-						<v-text-field
-							variant="outlined"
-							label="Write name for chat"
-						/>
-					</v-col>
-				</v-row>
+			<v-card-text class="pb-0">
+				<form-add-new-chat
+					:chat-data="chatData"
+					@change-value="(event, name) => handleOnChange(event, name)"
+					@change-valid="handleOnChangeValid"
+					@submit="handleOnSubmit"
+				/>
 			</v-card-text>
 			<v-card-actions>
 				<v-spacer />
@@ -40,7 +60,12 @@ const handleToUpdate = (value: boolean) => {
 						>
 					</v-col>
 					<v-col md="6" cols="12">
-						<v-btn block variant="outlined" color="primary"
+						<v-btn
+							block
+							variant="outlined"
+							color="primary"
+							:disabled="!valid"
+							@click="handleOnSubmit"
 							>Accept</v-btn
 						>
 					</v-col>

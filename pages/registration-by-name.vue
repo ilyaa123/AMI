@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RulesType } from '~/types/rules';
+import { RulesType } from '~/types/other';
 
 definePageMeta({
 	layout: 'session'
@@ -11,22 +11,26 @@ const name = useState('name', () => '');
 
 const isValid = useState('isValid', () => false);
 
-const rules: RulesType = [(value) => !!value || 'Это поле обязательно'];
+const rules: RulesType = [(value) => !!value || 'This field is required'];
 
-const hanleOnClick = () => {
+const handleOnRegister = () => {
 	auth.registerByName(name.value);
 };
 </script>
 <template>
 	<v-card max-width="600px" width="100%" class="py-6">
-		<v-card-title class="text-center">Write your name</v-card-title>
+		<v-card-title class="text-center">Write your username</v-card-title>
 		<v-card-text>
-			<v-form v-model="isValid">
+			<v-form v-model="isValid" @submit.prevent="handleOnRegister">
 				<v-row>
 					<v-col cols="12">
 						<v-text-field
 							v-model="name"
+							class="centered-input"
 							label="Name"
+							single-line
+							outline
+							style="text-align: center"
 							:rules="rules"
 						/>
 					</v-col>
@@ -39,9 +43,19 @@ const hanleOnClick = () => {
 				color="primary"
 				variant="outlined"
 				block
-				@click="hanleOnClick"
+				@click="handleOnRegister"
 				>Accept</v-btn
 			>
 		</v-card-actions>
 	</v-card>
 </template>
+<style scoped>
+.centered-input >>> input {
+	text-align: center;
+}
+.centered-input >>> .v-label {
+	top: 50%;
+	left: 50%;
+	transform: translate(-90%, -50%);
+}
+</style>

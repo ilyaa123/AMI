@@ -1,7 +1,4 @@
-export type ChatType = {
-	message: string;
+export type NewChatData = {
 	name: string;
-	time: string;
-	image: string;
-	number: string | number;
+	password: string;
 };

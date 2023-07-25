@@ -7,6 +7,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
 	if (auth.user.value) {
 		if (to.fullPath === '/' || to.fullPath.includes('app')) return;
+
 		if (from.fullPath === '/registration-by-name') return navigateTo('/');
 	} else if (to.fullPath === '/' || to.fullPath.includes('app')) {
 		return navigateTo('/registration-by-name');

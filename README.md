@@ -18,6 +18,7 @@ npm install
 # pnpm
 pnpm install
 ```
+
 ## Lint
 
 Using eslint:
@@ -35,6 +36,7 @@ npm run lint
 #fix with eslint and prettier
 npm run lint:fix
 ```
+
 ## Testing
 
 Using tests:
@@ -51,6 +53,7 @@ Start the development server on `http://localhost:3000`
 ```bash
 npm run dev
 ```
+
 ## Production
 
 Build the application for production:

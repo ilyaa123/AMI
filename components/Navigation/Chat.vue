@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ChatType } from '../../types/chat';
+import { NavigationChatItem } from '../../types/navigation';
 
 interface Props {
-	chat: ChatType;
+	chat: NavigationChatItem;
 }
 
 const props = defineProps<Props>();

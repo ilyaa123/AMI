@@ -23,6 +23,7 @@ const name = computed(() => {
 		rounded
 		width="100%"
 		:close-on-content-click="false"
+		location="bottom right"
 	>
 		<template #activator="{ props }">
 			<v-btn icon v-bind="props">

@@ -11,11 +11,14 @@ export default function () {
 		user.value = userCookie.value as UserType;
 	}
 
-	watch(userCookie, () => {
-		if (userCookie.value) {
-			user.value = userCookie.value as UserType;
+	watch(
+		() => userCookie.value,
+		() => {
+			if (userCookie.value) {
+				user.value = userCookie.value as UserType;
+			}
 		}
-	});
+	);
 
 	const registerByName = (nameValue: string) => {
 		const color = getRandomColor();
