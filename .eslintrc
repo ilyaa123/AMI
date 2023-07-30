@@ -21,6 +21,12 @@
 			{
 				"autofix": true
 			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
 		]
 	}
 }

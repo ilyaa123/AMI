@@ -40,7 +40,7 @@ watch(valid, () => {
 					label="Name"
 					:model-value="chatData.name"
 					:rules="requieredRules"
-					@update:model-value="
+					@update:modelValue="
 						(value) => handleOnChange(value, 'name')
 					"
 				/>
@@ -55,10 +55,10 @@ watch(valid, () => {
 						showPassword ? 'mdi-eye' : 'mdi-eye-off'
 					"
 					:type="showPassword ? 'text' : 'password'"
-					@update:model-value="
+					@update:modelValue="
 						(value) => handleOnChange(value, 'password')
 					"
-					@click:append-inner="showPassword = !showPassword"
+					@click:appendInner="showPassword = !showPassword"
 				/>
 			</v-col>
 		</v-row>
