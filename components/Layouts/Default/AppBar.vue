@@ -1,4 +1,3 @@
-<script setup lang="ts"></script>
 <template>
 	<v-app-bar location="top" rounded class="mx-4 px-4">
 		<template #prepend>
