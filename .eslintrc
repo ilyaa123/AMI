@@ -17,9 +17,17 @@
 		"indent": [2, "tab"],
 		"vue/v-on-event-hyphenation": [
 			"error",
-			"never",
+			"always",
 			{
-				"autofix": true
+				"autofix": false,
+				"ignore": []
+			}
+		],
+		"vue/component-name-in-template-casing": [
+			"error",
+			"kebab-case",
+			{
+				"registeredComponentsOnly": true
 			}
 		]
 	}

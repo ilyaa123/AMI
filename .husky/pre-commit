@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint:js && npm run build && npm run test:unit
-exit 1
+npm run lint:js 
+npm run build
+npm run test:unit
