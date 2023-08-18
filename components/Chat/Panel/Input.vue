@@ -22,6 +22,6 @@ const handleOnAddFile = () => {
 		:append-icon="!!message.text ? 'mdi-send' : 'mdi-microphone'"
 		prepend-inner-icon="mdi-paperclip"
 		@click:append="handleOnSandMessage"
-		@click:prependInner="handleOnAddFile"
+		@click:prepend-inner="handleOnAddFile"
 	/>
 </template>

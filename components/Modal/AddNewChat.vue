@@ -39,15 +39,15 @@ const handleOnChangeValid = (value: boolean) => {
 		:model-value="value"
 		max-width="600px"
 		width="100%"
-		@update:modelValue="handleToUpdate"
+		@update:model-value="handleToUpdate"
 	>
 		<v-card class="py-4">
 			<v-card-title>Create New Chat</v-card-title>
 			<v-card-text class="pb-0">
 				<form-add-new-chat
 					:chat-data="chatData"
-					@changeValue="(event, name) => handleOnChange(event, name)"
-					@changeValid="handleOnChangeValid"
+					@change-value="(event, name) => handleOnChange(event, name)"
+					@change-valid="handleOnChangeValid"
 					@submit="handleOnSubmit"
 				/>
 			</v-card-text>
