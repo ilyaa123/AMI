@@ -5,13 +5,13 @@ export default defineNuxtConfig({
 		head: {
 			charset: 'utf-8',
 			viewport: 'width=device-width, initial-scale=1',
+			title: 'AMI - Anonymus Messanger Incognito',
 			link: [
 				{
-					href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',
+					href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap',
 					rel: 'stylesheet'
 				}
-			],
-			title: 'AMI - Anonymus Messanger Incognito'
+			]
 		},
 		pageTransition: {
 			name: 'page',

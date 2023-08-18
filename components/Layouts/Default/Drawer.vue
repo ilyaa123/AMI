@@ -28,12 +28,12 @@ const testChats = [
 <template>
 	<v-navigation-drawer
 		:model-value="drawer"
+		:rail="rail"
 		width="350"
 		location="left"
 		absolute
 		rounded
 		permanent
-		:rail="rail"
 	>
 		<v-list lines="one" density="compact" nav>
 			<v-list-item color="primary" nav @click="rail = !rail">

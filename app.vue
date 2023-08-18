@@ -7,14 +7,8 @@
 	</v-app>
 </template>
 <style lang="scss">
-$body-font-family: 'Roboto';
-$title-font: 'Roboto';
-.v-application {
-	font-family: $body-font-family !important;
-	.title {
-		font-family: $title-font !important;
-	}
-}
+@use './scss/settings';
+
 .page-enter-active,
 .page-leave-active {
 	transition: all 0.4s;
