@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { useModalStore } from '~/store/modalStore';
 const store = useModalStore();
 
-const value = computed(() => store.getAddChatModal).value;
+const value = computed(() => store.addChatModal).value;
 
 const handleToAddNewChat = () => {
 	store.setAddChatModal(!value);

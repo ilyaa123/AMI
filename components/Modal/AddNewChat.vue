@@ -7,7 +7,7 @@ import type { NewChatData } from '~/types/chat';
 
 const store = useModalStore();
 
-const value = computed(() => store.getAddChatModal);
+const value = computed(() => store.addChatModal);
 
 const valid = ref(false);
 
