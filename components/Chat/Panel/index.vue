@@ -1,5 +1,12 @@
+<script setup lang="ts">
+interface Props {
+	isLoaded: boolean;
+}
+
+defineProps<Props>();
+</script>
 <template>
 	<div>
-		<ChatPanelInput />
+		<ChatPanelInput :disabled="!isLoaded" />
 	</div>
 </template>
