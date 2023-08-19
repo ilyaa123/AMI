@@ -9,6 +9,10 @@
 <style lang="scss">
 @use './scss/settings';
 
+body {
+	-webkit-app-region: drag;
+}
+
 .page-enter-active,
 .page-leave-active {
 	transition: all 0.4s;

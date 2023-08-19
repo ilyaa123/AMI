@@ -31,7 +31,19 @@ export default defineNuxtConfig({
 		'vuetify/lib/styles/main.sass',
 		'@mdi/font/css/materialdesignicons.min.css'
 	],
-	modules: ['@pinia/nuxt', 'nuxt-vitest', '@nuxtjs/eslint-module'],
+	modules: [
+		'@pinia/nuxt',
+		'nuxt-vitest',
+		'@nuxtjs/eslint-module',
+		'nuxt-electron'
+	],
+	electron: {
+		build: [
+			{
+				entry: 'electron/main.ts'
+			}
+		]
+	},
 	build: {
 		transpile: ['vuetify']
 	},
