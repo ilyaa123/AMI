@@ -31,7 +31,20 @@ export default defineNuxtConfig({
 		'vuetify/lib/styles/main.sass',
 		'@mdi/font/css/materialdesignicons.min.css'
 	],
-	modules: ['@pinia/nuxt', 'nuxt-vitest', '@nuxtjs/eslint-module'],
+	modules: [
+		'@pinia/nuxt',
+		'nuxt-vitest',
+		'@nuxtjs/eslint-module',
+		'nuxt-socket-io'
+	],
+	io: {
+		sockets: [
+			{
+				name: 'chat',
+				url: process.env.NUXT_PUBLIC_BASE_URL_API
+			}
+		]
+	},
 	build: {
 		transpile: ['vuetify']
 	},

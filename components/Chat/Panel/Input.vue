@@ -1,4 +1,10 @@
 <script setup lang="ts">
+interface Props {
+	disabled: boolean;
+}
+
+defineProps<Props>();
+
 const message = reactive({
 	text: ''
 });
@@ -19,6 +25,7 @@ const handleOnAddFile = () => {
 		label="Message"
 		clearable
 		hide-details="auto"
+		:disabled="disabled"
 		:append-icon="!!message.text ? 'mdi-send' : 'mdi-microphone'"
 		prepend-inner-icon="mdi-paperclip"
 		@click:append="handleOnSandMessage"
