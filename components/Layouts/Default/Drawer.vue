@@ -10,18 +10,6 @@ const testChats = [
 		message: 'Can just tell me alredy how big ur test 1',
 		time: '18:19',
 		image: '/avatar.png'
-	},
-	{
-		name: 'Zeri2',
-		message: 'Can just tell me alredy how big ur test 2',
-		time: '18:29',
-		image: '/avatar.png'
-	},
-	{
-		name: 'Zeri3',
-		message: 'Can just tell me alredy how big ur test 3',
-		time: '18:39',
-		image: '/avatar.png'
 	}
 ];
 </script>
