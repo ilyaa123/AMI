@@ -5,13 +5,19 @@ interface Props {
 
 defineProps<Props>();
 
+const emit = defineEmits<{
+	(e: 'sendMessage', text: string): void;
+}>();
+
 const message = reactive({
 	text: ''
 });
 
 const handleOnSandMessage = () => {
-	// eslint-disable-next-line
-	console.log('send', message.text);
+	if (message.text) {
+		emit('sendMessage', message.text);
+		message.text = '';
+	}
 };
 
 const handleOnAddFile = () => {

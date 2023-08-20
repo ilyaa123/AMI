@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface Props {
 	isLoaded: boolean;
+	messages: string[];
 }
 
 defineProps<Props>();
@@ -11,7 +12,9 @@ defineProps<Props>();
 			<ChatContentLoading />
 		</template>
 		<template v-else>
-			<ChatContentFileDrop />
+			<ChatContentFileDrop>
+				<ChatContentMessages :messages="messages" />
+			</ChatContentFileDrop>
 		</template>
 	</div>
 </template>
