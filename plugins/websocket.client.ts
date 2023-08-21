@@ -11,6 +11,9 @@ export default defineNuxtPlugin(() => {
 
 		const { baseSocketApi } = useRuntimeConfig().public;
 
+		// eslint-disable-next-line
+		console.log('LL: createWebSocket -> baseSocketApi', baseSocketApi);
+
 		url = new URL(baseSocketApi);
 
 		if (params?.url) {
