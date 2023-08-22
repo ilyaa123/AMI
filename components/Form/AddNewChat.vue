@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NewChatData } from '~/types/chat';
+import type { NewChatData } from '~/types/app/chat';
 
 import type { RulesType } from '~/types/other';
 

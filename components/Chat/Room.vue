@@ -7,10 +7,10 @@ const socket = ref<WebSocket | null>(null);
 
 const messages = ref<string[]>([]);
 
-const { $createWebSocket } = useNuxtApp();
+const { $useWebSocket } = useNuxtApp();
 
 onMounted(() => {
-	socket.value = $createWebSocket();
+	socket.value = $useWebSocket();
 
 	socket.value.onopen = handleOnOpen;
 

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// import { VInfiniteScroll } from 'vuetify/labs/VInfiniteScroll';
+
 interface Props {
 	isLoaded: boolean;
 	messages: string[];

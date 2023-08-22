@@ -1,4 +1,4 @@
-import { UserType } from '~/types/user';
+import { UserType } from '~/types/app/user';
 
 export default function () {
 	const userCookie = useCookie('user');

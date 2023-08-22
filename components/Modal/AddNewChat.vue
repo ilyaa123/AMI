@@ -3,7 +3,7 @@ import { computed } from 'vue';
 
 import { useModalStore } from '../../store/modalStore';
 
-import type { NewChatData } from '~/types/chat';
+import type { NewChatData } from '~/types/app/chat';
 
 const store = useModalStore();
 

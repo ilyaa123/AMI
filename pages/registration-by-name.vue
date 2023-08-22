@@ -50,10 +50,10 @@ const handleOnRegister = () => {
 	</v-card>
 </template>
 <style scoped>
-.centered-input >>> input {
+.centered-input:deep(input) {
 	text-align: center;
 }
-.centered-input >>> .v-label {
+.centered-input:deep(.v-label) {
 	top: 50%;
 	left: 50%;
 	transform: translate(-90%, -50%);

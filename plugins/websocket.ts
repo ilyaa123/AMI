@@ -1,23 +1,23 @@
 interface WebSoketParams {
 	url?: URL;
-	path: string;
+	path?: string;
 }
 
 export default defineNuxtPlugin(() => {
-	const createWebSocket = (params?: WebSoketParams) => {
+	const useWebSocket = (params?: WebSoketParams) => {
 		let url: URL;
 
-		// let path: string = '/';
+		const path: string = params?.path ?? '/';
 
 		const { baseSocketApi } = useRuntimeConfig().public;
 
 		// eslint-disable-next-line
 		console.log('LL: createWebSocket -> baseSocketApi', baseSocketApi);
 
-		url = new URL(baseSocketApi);
+		url = new URL(path, baseSocketApi);
 
 		if (params?.url) {
-			url = new URL(params.url);
+			url = new URL(path, params.url);
 		}
 
 		const socket = new WebSocket(url);
@@ -27,7 +27,7 @@ export default defineNuxtPlugin(() => {
 
 	return {
 		provide: {
-			createWebSocket
+			useWebSocket
 		}
 	};
 });
