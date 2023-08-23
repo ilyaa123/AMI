@@ -33,6 +33,8 @@ const testChats = [
 
 		<NavigationNewChat />
 
+		<NavigationSearch @open-drawer="rail = false" />
+
 		<NavigationChat
 			v-for="(chat, index) in testChats"
 			:key="index"

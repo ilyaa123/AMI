@@ -10,7 +10,7 @@ const handleToAddNewChat = () => {
 };
 </script>
 <template>
-	<v-list>
+	<v-list density="compact">
 		<v-list-item @click="handleToAddNewChat">
 			<template #prepend>
 				<v-icon>mdi-plus</v-icon>
